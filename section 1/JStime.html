@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>JavaScript In The WEB</title>
+        <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+        <style media="screen">
+            
+            html { font-size:100%; }
+            
+            body, button, input {
+                font-family: 'Oswald', sans-serif;
+            }
+            
+            body { margin: 80px 160px 0; }
+            
+            input{
+                padding: 5px 80px;
+                padding-left: 2px;
+                float: right;
+            }
+            label{
+               font-size: 150%;
+            }
+            
+            
+        </style>
+    </head>
+    <body>
+        
+        <!-- <h1 class="main">JavaScript in Web!</h1>
+        <h1 class="theme">JavaScript in Web!</h1>
+        <h1 class="main">JavaScript in Web!</h1>
+        <h1 class="theme">JavaScript in Web!</h1>
+        <button type="submit" onclick="toggleVisibility()">toggle</button> -->
+
+        <form action="" id="form">
+            <label for="name">Name </label>
+            <input type="text" placeholder="type here" id="name">
+        </form>
+
+        <script type="text/javascript">
+            document.querySelector("form").addEventListener("submit",function(event){
+                let submit= confirm("Are you sure want to submit the forms?");
+                if(!submit){
+                    return event.preventDefault();
+                }
+                alert("form submitted");
+            })
+            document.querySelector("#fname").addEventListener("click",function(event){
+                event.ht
+            })
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+           /*  let element = document.querySelectorAll(".main");
+            let visible = true;
+            function toggleVisibility(){
+                visible = !visible;
+                element.forEach(function(elem,i){
+                   
+                    let visibility = visible? "visible" : "hidden";
+                    elem.style.visibility = visibility;
+                })
+            } */
+        </script>
+        <noscript>Our website required Javascript to function properly, please enable it</noscript>
+    </body>
+</html> 

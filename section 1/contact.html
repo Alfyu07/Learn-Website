@@ -1,0 +1,85 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Contact </title>
+     <link href="https://fonts.googleapis.com/css?family=Jomolhari&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+ </head>
+ <body>
+     <nav>
+         <ul>
+             <li><a href="#" target="_blank"><strong>Home</strong></a></li>
+             <li><a href="#" target="_blank"><strong>About</strong></a></li>
+             <li><a href="https://www.nodejs.org" target="_blank"><strong>Numbers</strong></a></li>
+             <li><a href="contact.html" target="_blank"><strong>Contact</strong></a></li>
+             <div class="login">
+                <li><a href="#">Sign Up</a></li>
+                <li><a href="">Login</a></li>
+             </div>
+             
+         </ul>
+     </nav>
+    
+        <h1 id="header">Subscribe Us!</h1>
+      
+  <form name="form" id="form">
+   <label >Your Name</label>
+   <input type="text" id="name" name="name" placeholder="type your name here.." class = "input"/>
+   <label for="email"  >Your Email</label >
+   <input type="email" id="email" name="email" class = "input"/>
+   <label for="Password">Password</label>
+   <input type="password" id="prize" name="prize" class = "input"/>
+   <label for="address">Confirm Your Password</label>
+   <input type="password" id="Confirm" name="confirm" class = "input"/>
+   <input type="submit" id="submit"></button>
+   
+  </form>
+
+  <script>
+    showpages();
+    let input = document.getElementsByClassName("input");
+    let array = ["name","email","password"];
+    document.getElementById("submit").addEventListener("click",function(event){
+      let valid = true;
+      for(let i = 0; i<array.length; i++){
+        if(input[i].value==""){
+          alert("your " + array[i] + " can't be blank");
+          valid = false;
+        }
+      }
+      if(!(input[2].value===input[3].value)){
+        alert("your password didn't match")
+        valid = false;
+      }
+      if(valid){
+        let conf = confirm("are you sure?");
+        if(conf){
+
+          alert("form submitted successfully");
+          changeHTML();
+        }
+        return event.preventDefault();
+      }
+    })
+    
+    function changeHTML(){
+      let value = "Thx for submitting";
+      let header = document.getElementById("header");
+      header.innerHTML=value;
+    }
+    function showpages(){
+      alert("the page will show after 3 seconds");
+      document.body.style.visibility = "hidden";
+      setTimeout(function(){
+        document.body.style.visibility="visible"; 
+    },3000) 
+    }
+     
+
+
+  </script>
+ </body>
+ </html>
